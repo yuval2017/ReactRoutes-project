@@ -26,7 +26,6 @@ export default function About(){
           </div>
         </div>
       </div>
-      <button className="van-life-button">Ⓒ 2022 #VANLIFE</button>
 
     </div>
     

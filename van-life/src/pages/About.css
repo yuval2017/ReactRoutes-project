@@ -1,0 +1,95 @@
+.about{
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+
+  gap: 30px;
+  font-family: 'Inter', sans-serif;
+  z-index: 200;
+  padding-bottom: 53px;
+}
+.img-container img {
+  max-width: 100%;
+  height: auto;
+}
+.img-container img {
+  max-width: 100%;
+  height: auto;
+}
+.about-main-container{
+  display: flex;
+  flex-direction: column;
+  padding-right: 27.13px;
+  padding-left: 27.02px;
+}
+.about-main-container h1 {
+  margin-top: 0;
+  max-width: 100%;
+}
+.about-topic{
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+}
+.about-content p {
+  font-weight: 500;
+  line-height: 22px;
+  size: 16px;
+}
+.van-explore-container {
+  background-color: rgba(255, 204, 141, 1);
+  padding-left: 36.79px;
+  padding-bottom: 20px ;
+  padding-top: 20px;
+  border-radius: 5px;
+  
+  
+}
+
+.van-explore {
+  display: flex;
+  flex-direction: column;
+  padding-right: 63.81px;
+  gap: 10px;
+  flex-grow: 0;
+  /* make the button not stretch */
+  align-items: flex-start; 
+}
+
+.about-dest-van-container{
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  
+}
+.explore-vans-button{
+  border: none;
+  font-weight: 700;
+  padding: 12px 22px 12px 22px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(22, 22, 22, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font: inter;
+  font-size: 15.95px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+.van-life-button{
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 23px;
+  /* or 164% */
+  text-align: center;
+  color: rgba(170, 170, 170, 1);
+  background-color: rgba(37, 37, 37, 1);
+  padding-top: 25.68px;
+  padding-bottom: 25.15px;
+  cursor: pointer;
+  border: none;
+}

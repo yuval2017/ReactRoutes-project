@@ -1,0 +1,61 @@
+.App{
+  background-color: rgba(255, 247, 237, 1);
+  padding-top: 79px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.header{
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;  
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  z-index: 1000;
+  background-color: aquamarine;
+}
+.left-section{
+  flex: 1;
+  padding-left: 10px;
+}
+.site-logo{
+  text-decoration: none;
+  text-align: center;
+  font-style: Black;
+  font-size: 25.35px;
+  color: black;
+  font-weight: bold;
+}
+.nav-bar{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  align-items: center;
+  
+}
+.nav-bar .about-nav{
+  text-decoration: none;
+  font-weight: 800px;
+  font-size: 16px;
+  color: rgba(77, 77, 77, 1);
+}
+
+
+.van-life-button{
+  font-weight: 500;
+  font-size: 12px;
+  /* or 164% */
+  text-align: center;
+  color: rgba(170, 170, 170, 1);
+  background-color: rgba(37, 37, 37, 1);
+  padding-top: 25.68px;
+  padding-bottom: 25.15px;
+  cursor: pointer;
+  border: none;
+}

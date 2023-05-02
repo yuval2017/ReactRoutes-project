@@ -1,0 +1,52 @@
+.home{
+  font-family: "Inter", sans-serif;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url("/public/images/image\ 53.png") no-repeat center center;
+
+  background-size: cover;
+  color: white;
+  padding: 65.78px 26.91px 64.78px 26.91px;
+  z-index: 200;
+  flex: 1;
+  height: auto;
+}
+
+
+.home-content{
+  justify-content: center;
+  
+}
+
+.home-topic{
+  font-style: Extra Bold;
+  font-size: 36px;
+  line-height: 42px;
+  line-height: 96%;
+}
+
+.home-text{
+  display: flex;
+  flex-direction: column;
+  gap: 51.66px;
+  
+}
+.home-text p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.home-text button{
+  flex-grow: 1;
+
+  border: none;
+  background-color: rgba(255, 140, 56, 1);
+  border-radius: 5px;
+  padding-top: 8.97px;
+  padding-bottom: 10.77px;
+
+  font-weight: bold;
+  font-size: 15.95px;
+  line-height: 164%;
+  color: white;
+}

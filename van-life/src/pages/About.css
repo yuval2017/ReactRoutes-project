@@ -80,16 +80,3 @@
 }
 
 
-.van-life-button{
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 23px;
-  /* or 164% */
-  text-align: center;
-  color: rgba(170, 170, 170, 1);
-  background-color: rgba(37, 37, 37, 1);
-  padding-top: 25.68px;
-  padding-bottom: 25.15px;
-  cursor: pointer;
-  border: none;
-}

@@ -1,0 +1,59 @@
+.van-detail-container{
+  font-family: 'Inter', sans-serif;
+  padding-left: 26.91px;
+  padding-right: 23.92px ;
+  padding-top: 39.86px;
+  padding-bottom: 84.71px;
+}
+.vans-link *{
+  font-size: 15.95px;
+  color: black;
+  
+}
+.vans-link{
+  padding-bottom: 40.79px;
+}
+.van-detail{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.van-image-container{
+  padding-bottom: 50.38px;
+}
+.van-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.van-type{
+  border-radius: 5px;
+  border: none;
+  color: rgba(255, 234, 208, 1);
+  font-weight: 600;
+  padding: 7px 14px;
+  
+}
+.van-type.simple.selected{
+  background-color: #E17654;
+}
+.van-type.rugged.selected{
+  background-color: #115E59;
+}
+.van-type.luxury.selected{
+  background-color: #161616;
+}
+.left-detail > button [class*='van-type-']{
+}
+.van-description{
+  font-weight: 500;
+  font-size: 16px;
+}
+.rent-button{
+  width: 100%;
+  padding: 9.97px 0px 9.77px 0px;
+  text-align: center; 
+  background-color: rgba(255, 140, 56, 1);
+  border: none;
+  border-radius: 4.98px;
+}

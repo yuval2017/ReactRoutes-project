@@ -1,0 +1,74 @@
+.vans-container{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  padding-left: 26.79px;
+  padding-right: 41.37px;
+  padding-bottom: 83.23px;
+  
+}
+.vans-top{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.explore-vans{
+  font-weight: bold;
+  font-size: 25.35px;
+}
+.search-vans{
+  display: flex;
+}
+.buttons-search-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  
+}
+.buttons-search-container button{
+  background-color: rgba(255, 234, 208, 1);
+  border: none;
+  border-radius: 5px;
+  padding: 6px 26px 7px 26px;
+
+  color: rgba(77, 77, 77, 1);
+  font-size: 16px;
+  margin: 0;
+}
+
+.clear-container a{
+  text-decoration: underline;
+  color: rgba(77, 77, 77, 1);
+  font-size: 16px;
+}
+
+.clear-container{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.vans-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  column-gap: 16px;
+  row-gap: 40px;
+  
+}
+.van-preview{
+  display: flex;
+  flex-direction: column;
+}
+.van-image-container{
+  max-width: 100%;
+}
+.van-picture{
+  width: 100%;
+}
+.van-details {
+  display: flex;
+  justify-content: space-between;
+}

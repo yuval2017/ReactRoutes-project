@@ -16,15 +16,21 @@
   align-items: center;
   padding-top: 20px;
   padding-bottom: 30px;
+  padding-left: 26.79px;
+
   z-index: 1000;
+  
   background-color: rgba(255, 247, 237, 1);
 }
+.header a {
+  text-decoration: none;
+}
+
 .left-section{
   flex: 1;
   padding-left: 10px;
 }
 .site-logo{
-  text-decoration: none;
   text-align: center;
   font-style: Black;
   font-size: 25.35px;
@@ -36,14 +42,14 @@
   display: flex;
   justify-content: flex-end;
   padding-right: 20px;
-  align-items: center;
-  
+  gap: 20px;
 }
-.nav-bar .about-nav{
-  text-decoration: none;
-  font-weight: 800px;
-  font-size: 16px;
+
+.about-nav, 
+.vans-nav {
   color: rgba(77, 77, 77, 1);
+  font-weight: 600;
+  font-size: 16px;
 }
 
 

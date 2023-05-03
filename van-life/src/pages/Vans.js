@@ -9,14 +9,14 @@ export default function Vans(){
   }, [])
   const vans = vansData.map(vanData => (<div key={vanData.id} className="van-preview">
                                               <div className="van-image-container">
-                                                <img className="van-picture" src={vanData.imageUrl}/>
+                                                <img className="van-picture" src={vanData.imageUrl} alt="Not Found"/>
                                               </div>
                                               <div className="van-details">
                                                 <div className="left-detail"> 
                                                   <div className="van-name">
                                                     {vanData.name}
                                                   </div>
-                                                  <button>{vanData.type}</button>
+                                                  <button className={`van-type ${vanData.type} selected`}>{vanData.type}</button>
                                                 </div>
                                                 <div className="right-detail">
                                                     <div className="van-price">
@@ -41,8 +41,8 @@ export default function Vans(){
             <button>Luxury</button>
             <button>Rugged</button>
           </div>
-          <div className="clear-container">
-            <a>Clear filters</a>
+          <div className="clear-filters">
+            Clear filters
           </div>
         </div>
       </div>

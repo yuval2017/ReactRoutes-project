@@ -5,13 +5,14 @@
   padding-left: 26.79px;
   padding-right: 41.37px;
   padding-bottom: 83.23px;
+  gap: 55.69px;
   
 }
 .vans-top{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 22.39px;
 }
 
 .explore-vans{
@@ -20,6 +21,8 @@
 }
 .search-vans{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .buttons-search-container{
   display: flex;
@@ -39,7 +42,7 @@
   margin: 0;
 }
 
-.clear-container a{
+.clear-filters {
   text-decoration: underline;
   color: rgba(77, 77, 77, 1);
   font-size: 16px;
@@ -56,7 +59,6 @@
   grid-template-columns: 1fr 1fr ;
   column-gap: 16px;
   row-gap: 40px;
-  
 }
 .van-preview{
   display: flex;
@@ -67,8 +69,44 @@
 }
 .van-picture{
   width: 100%;
+  border-radius: 5px;
 }
 .van-details {
   display: flex;
   justify-content: space-between;
+}
+.left-detail{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4.87px;
+}
+.van-name, .van-price{
+  font-weight: 600;
+}
+.van-type{
+  border-radius: 5px;
+  border: none;
+  color: rgba(255, 234, 208, 1);
+  font-weight: 600;
+  padding: 7px 14px;
+  
+}
+.van-type.simple.selected{
+  background-color: #E17654;
+}
+.van-type.rugged.selected{
+  background-color: #115E59;
+}
+.van-type.luxury.selected{
+  background-color: #161616;
+}
+.left-detail > button [class*='van-type-']{
+  
+}
+.right-detail{
+
+}
+.van-per-day{
+  font-size: 14px;
 }

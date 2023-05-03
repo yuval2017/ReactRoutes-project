@@ -11,13 +11,14 @@ export default function Vans(){
                                               <div className="van-image-container">
                                                 <img className="van-picture" src={vanData.imageUrl} alt="Not Found"/>
                                               </div>
-                                              <div className="van-details">
+                                               <div className="van-details">
                                                 <div className="left-detail"> 
                                                   <div className="van-name">
-                                                    {vanData.name}
+                                                    {`${vanData.name}`}
                                                   </div>
                                                   <button className={`van-type ${vanData.type} selected`}>{vanData.type}</button>
                                                 </div>
+                                              
                                                 <div className="right-detail">
                                                     <div className="van-price">
                                                       {`$${vanData.price}`}
@@ -26,7 +27,7 @@ export default function Vans(){
                                                         /day
                                                     </div>
                                                 </div>
-                                              </div>
+                                              </div> 
                                             </div>))
   
   return (

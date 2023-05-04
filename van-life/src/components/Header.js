@@ -1,14 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 export default function Header(){
+  const style = {
+    fontWieght: 'bold',
+    textDecoration: 'underline',
+    color: '#161616',
+  }
   return (
     <header className='header'>
     <div className = 'left-section'>
-      <Link className='site-logo' to="/">#VANLIFE</Link>
+      <NavLink className='site-logo' to="/">#VANLIFE</NavLink>
     </div>
     <nav className='nav-bar'>
-      <Link className='about-nav' to="/about">About</Link>
-      <Link className='vans-nav' to="/vans">Vans</Link>
+      {/* also we can use activeStyle */}
+      {/* <NavLink style={({isActive}) => isActive ? style: null} className="host-nav" to="/host">Host</NavLink> */}
+      <NavLink activeClassName="active" to="/host">Host</NavLink>
+      <NavLink activeClassName="active" to="/about">About</NavLink>
+      <NavLink activeClassName="active" to="/vans">Vans</NavLink>
     </nav>    
   </header>
   );

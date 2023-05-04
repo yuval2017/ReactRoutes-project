@@ -1,0 +1,88 @@
+.host-vans-container{
+  display: flex;
+  flex-direction: column;
+  padding-top: 37px;
+  padding-bottom: 53px;
+
+}
+.host-vans-container a{
+  color: black;
+  text-decoration: none;
+}
+
+.host-van-top-content,
+.host-van-middle-content,
+.host-van-bottom-content{
+  padding-left: 27px;
+  padding-right:29px ;
+}
+
+.host-van-top-content{
+  background-color: rgba(255, 234, 208, 1);
+  display: flex;
+  flex-direction: column; 
+  
+
+}
+.income-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 10px;
+  
+}
+
+.income-container .detail-text{
+  justify-self: end;
+}
+.host-van-middle-content{
+  background-color: rgba(255, 221, 178, 1);
+  display: flex;
+  justify-content: space-between;
+}
+.host-van-bottom-content,
+.topic-list-vans-container{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.topic-list-vans-container{
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.topic-list-vans-container h2{
+  margin-top: 0;
+}
+
+
+.host-vans-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 15px;
+}
+.host-van-preview{
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 27px 18px 24px;
+}
+.host-van-detalis{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 17px;
+}
+.host-van-image-container{
+  flex: 1;
+}
+.host-van-image{
+  width: 100%;
+  border-radius: 5px;
+}
+.host-van-price{
+  flex: 4;
+}

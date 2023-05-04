@@ -3,7 +3,7 @@
   padding-top: 79px;
   display: flex;
   flex-direction: column;
-
+  font-family: 'Inter', sans-serif;
 }
 
 
@@ -18,7 +18,6 @@
   padding-top: 20px;
   padding-bottom: 30px;
   padding-left: 26.79px;
-
   z-index: 1000;
   
   background-color: rgba(255, 247, 237, 1);
@@ -45,13 +44,21 @@
   padding-right: 20px;
   gap: 20px;
 }
-
-.about-nav, 
-.vans-nav {
+.nav-bar a{
   color: rgba(77, 77, 77, 1);
-  font-weight: 600;
   font-size: 16px;
 }
+.nav-bar a:hover,
+.host-nav a:hover,
+.host-nav a.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.host-nav a.active, 
+.nav-bar a.active{
+  color: #161616;
+}
+
 
 
 .van-life-button{
@@ -66,3 +73,14 @@
   cursor: pointer;
   border: none;
 }
+
+.host-nav{
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.host-nav a{
+  color: rgba(77, 77, 77, 1);
+  text-decoration: none;
+}
+

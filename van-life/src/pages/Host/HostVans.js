@@ -44,7 +44,7 @@ export default function HostVans(){
       <div className="host-van-middle-content">
         <h2>
           <span style={{ marginRight: "10px" }}>{`Review score ${"score-here"}`}</span>
-          <img src="../images/Star 3.png" />
+          <img src="../images/Star 3.png" alt="Not Found"/>
           <span style={{ marginLeft: "10px" }}>{`/`}</span>
         </h2>
         <div className="detail-text">Details</div>

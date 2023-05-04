@@ -1,11 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 export default function Header(){
-  const style = {
-    fontWieght: 'bold',
-    textDecoration: 'underline',
-    color: '#161616',
-  }
   return (
     <header className='header'>
     <div className = 'left-section'>

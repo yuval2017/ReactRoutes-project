@@ -38,6 +38,7 @@
   background-color: rgba(255, 221, 178, 1);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .host-van-bottom-content,
 .topic-list-vans-container{

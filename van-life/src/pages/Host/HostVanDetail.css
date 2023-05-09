@@ -1,0 +1,62 @@
+.host-van-section{
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-right: 10px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.host-van-container{
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 10px 10px 10px;
+}
+.back-to-all-vans-button{
+  color: black;
+  text-decoration: none;
+}
+.back-to-all-vans-button:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.host-van{
+  display: flex;
+  gap: 10px;
+  
+  
+  
+  
+}
+.host-van-img-container{
+  flex: 1.5; 
+}
+.host-van-img-container img{
+  width: 100%;
+  border-radius: 5px;
+}
+.host-van-detail{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  justify-content: center;
+  
+}
+.host-nav-container{
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.host-nav-container a{
+  color: black;
+  text-decoration: none;
+}
+.host-nav-container a:hover{
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+}

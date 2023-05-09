@@ -5,11 +5,12 @@ export default function HostLayout(){
   return(
     <>
       <nav className="host-nav">
-        {/* if more nested routs meets it will not set active*/}
-        <NavLink end activeClassName="active" to='/host'>Dashboard</NavLink>
-        <NavLink activeClassName="active" to='/host/income'>Income</NavLink>
-        <NavLink activeClassName="active" to='/host/vans'>Vans</NavLink>
-        <NavLink activeClassName="active" to='/host/reviews'>Reviews</NavLink>
+        {/* . say i want to link where is the HostLayout was rendered */}
+        {/*? if more nested routs meets it will not set active*/}
+        <NavLink end activeClassName="active" to='.'>Dashboard</NavLink>
+        <NavLink Name="active" to='income'>Income</NavLink>
+        <NavLink activeClassName="active" to='vans'>Vans</NavLink>
+        <NavLink activeClassName="active" to='reviews'>Reviews</NavLink>
       </nav>
       <Outlet />
     </>

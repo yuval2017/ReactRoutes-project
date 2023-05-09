@@ -1,0 +1,8 @@
+.host-van-photo-container{
+  height: 30vh;
+  width: 30vh; 
+}
+.host-van-photo-container img{
+  width: 100%;
+  border-radius: 5px;
+}

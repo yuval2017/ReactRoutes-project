@@ -12,6 +12,9 @@ import Dashboard from './pages/Host/Dashboard';
 import HostLayout from './components/HostLayout';
 import HostVans from './pages/Host/HostVans';
 import { HostVanDetail } from './pages/Host/HostVanDetail';
+import HostVanInfo from './pages/Host/HostVanInfo';
+import HostVanPhotos from './pages/Host/HostVanPhotos';
+import HostVanPricing from './pages/Host/HostVanPricing';
 function App() {
   return (
       <BrowserRouter>     
@@ -21,17 +24,20 @@ function App() {
             <Route index element={<Home />}/>
             <Route path='about' element={<About />}/>
 
-            <Route path='vans' >
-              <Route index element={<Vans />}/>
-              <Route path=':id' element={<VanDetail />}/>
-            </Route>
+            <Route path="vans" element={<Vans />} />
+            <Route path="vans/:id" element={<VanDetail />} />
+          
 
             <Route path='host' element = {<HostLayout />} >
               <Route index element = {<Dashboard />} />
               <Route path='income' element = {<Income />} /> 
               <Route path='reviews' element = {<Reviews />} /> 
-              <Route path='vans' element = {<HostVans />} />
-              <Route path='vans/:id' element = {<HostVanDetail />}/>
+              <Route path='vans' element = {<HostVans />} ></Route>
+              <Route path='vans/:id' element = {<HostVanDetail />}>
+                  <Route index element={<HostVanInfo />}/>
+                  <Route path = 'photos' element={<HostVanPhotos />}/>
+                  <Route path = 'pricing' element={<HostVanPricing />}/>
+              </Route>
             </Route>
           </Route>
         </Routes>        

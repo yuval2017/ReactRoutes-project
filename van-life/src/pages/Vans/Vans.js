@@ -25,7 +25,7 @@ export default function Vans(){
       return prevParams
     })
   }
-  const displayVans = !typeFilter ? vansData: vansData.filter(van => van.type.toLowerCase() == typeFilter)
+  const displayVans = !typeFilter ? vansData: vansData.filter(van => van.type.toLowerCase() === typeFilter)
   const vans = displayVans.map(vanData => (<div key={vanData.id} className="van-preview">
                                             <Link to={`/vans/${vanData.id}`}>
                                               <div className="van-image-container">

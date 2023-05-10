@@ -9,7 +9,7 @@ Link > *{
   padding: 54.23px 28.9px 83.23px 26.91px;
   gap: 55.69px;
 }
-.vans-container *{
+.vans-container a{
   color: black;
   text-decoration: none;
 }
@@ -106,6 +106,21 @@ Link > *{
   column-gap: 33.89px;
   row-gap: 26.91px;
 }
+@media (max-width: 750px) {
+  .vans-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 750px) and (min-width: 999px){
+  .vans-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1000px) {
+  .vans-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
 .van-preview{
   display: flex;
   flex-direction: column;
@@ -136,8 +151,6 @@ Link > *{
 .van-name, .van-price{
   font-weight: 600;
 }
-
-
 .right-detail{
   flex-direction: column;
   align-items: flex-end;

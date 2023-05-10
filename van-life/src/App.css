@@ -41,6 +41,7 @@
   flex: 1;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   padding-right: 20px;
   gap: 20px;
 }
@@ -62,6 +63,15 @@
 .host-nav-container a.active{
   color: #161616;
   pointer-events: none;
+}
+.login-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.login-icon{
+  width: 70%;
 }
 
 
@@ -89,4 +99,3 @@
   color: rgba(77, 77, 77, 1);
   text-decoration: none;
 }
-

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 export default function Header(){
   return (
     <header className='header'>
@@ -12,6 +12,9 @@ export default function Header(){
       <NavLink activeclassname="active" to="/host">Host</NavLink>
       <NavLink activeclassname="active" to="/about">About</NavLink>
       <NavLink activeclassname="active" to="/vans">Vans</NavLink>
+      <Link to='login' className="login-link">
+        <img src="/images/Icon.png" alt="Not Found" className="login-icon" />
+      </Link>
     </nav>    
   </header>
   );

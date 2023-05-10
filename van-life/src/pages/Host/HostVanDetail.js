@@ -1,22 +1,16 @@
 import {  useEffect ,useState } from "react";
-import { Link, NavLink, Outlet, useParams } from "react-router-dom"
+import { Link, NavLink, Outlet, useLoaderData, useParams } from "react-router-dom"
 import './HostVanDetail.css'
+import { getHostVan } from "../../api";
 
-
+export async function loader(id){
+  const data = getHostVan(id);
+  return data;
+}
 
 export function HostVanDetail(){
-  const {id} = useParams()
-  const [currentVan, setCurrentVan] = useState(null)
-  useEffect(()=>{
-    fetch(`/api/host/vans/${id}`)
-          .then(result => result.json())
-          .then(data => setCurrentVan(data.vans))
-  }, [id])
-  if(!currentVan){
-    return <h1>Loading...</h1>
-  }
-
-
+  
+  const currentVan = useLoaderData()
   return(
     <section className="host-van-section">
       <Link to=".." relative="path" className="back-to-all-vans-button">

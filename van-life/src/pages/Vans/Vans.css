@@ -102,21 +102,21 @@ Link > *{
 }
 .vans-grid{
   display: grid;
-  grid-template-columns: 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr;
   column-gap: 33.89px;
   row-gap: 26.91px;
 }
-@media (max-width: 750px) {
+@media (max-width: 700px) {
   .vans-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
   }
 }
-@media (max-width: 750px) and (min-width: 999px){
+@media (max-width: 700px) and (min-width: 900x){
   .vans-grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .vans-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }

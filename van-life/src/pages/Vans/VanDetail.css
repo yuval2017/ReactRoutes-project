@@ -1,4 +1,7 @@
 .van-detail-container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   font-family: 'Inter', sans-serif;
   padding-left: 26.91px;
   padding-right: 23.92px ;

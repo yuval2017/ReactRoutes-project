@@ -2,18 +2,28 @@ import React from "react";
 import './Vans.css'
 import { Link, useSearchParams } from "react-router-dom";
 import './VanDetail.css'
+import { getVans } from "../../api";
 export default function Vans(){
 
 
   const [searchParams, setSearchParams] = useSearchParams()
   const [vansData, setVansData] = React.useState([])
+  const [loading, setLoading] = React.useState(true)
+  const [error, setError] = React.useState(null)
 
   const typeFilter = searchParams.get("type")
 
   React.useEffect(() => {
-    fetch("/api/vans")
-      .then(res => res.json())
-      .then(data => setVansData(data.vans))
+    async function loadVans(){
+      try{
+        const data = await getVans()
+        setVansData(data)
+      }catch(err){
+        setError(err)
+      }   
+      setLoading(false)
+    }
+    loadVans()
   }, [])
   function handleFilter(key, value){
       //clear all filtering
@@ -22,6 +32,7 @@ export default function Vans(){
     }
 
     setSearchParams(prevParams => {
+      //filter all the keys
       // const filterParams = Array.from(prevParams.entries());
       // const existingFilter = filterParams.find(([paramKey]) => paramKey === key);
       //cear current filter
@@ -33,9 +44,14 @@ export default function Vans(){
       return prevParams
     })
   }
+  if (loading){
+    return <h1>Loading...</h1>
+  }
   const displayVans = !typeFilter ? vansData: vansData.filter(van => van.type.toLowerCase() === typeFilter)
+
   const vans = displayVans.map(vanData => (<div key={vanData.id} className="van-preview">
-                                            <Link to={`/vans/${vanData.id}`}>
+                                          {/* state goes inside uselocation to goes inside useParams */}
+                                          <Link to= {vanData.id} state = {{search: `?${searchParams.toString()}`, type: typeFilter}}>
                                               <div className="van-image-container">
                                                 <img className="van-picture" src={vanData.imageUrl} alt="Not Found"/>
                                               </div>

@@ -9,9 +9,9 @@ export default function Header(){
     <nav className='nav-bar'>
       {/* also we can use activeStyle */}
       {/* <NavLink style={({isActive}) => isActive ? style: null} className="host-nav" to="/host">Host</NavLink> */}
-      <NavLink activeClassName="active" to="/host">Host</NavLink>
-      <NavLink activeClassName="active" to="/about">About</NavLink>
-      <NavLink activeClassName="active" to="/vans">Vans</NavLink>
+      <NavLink activeclassname="active" to="/host">Host</NavLink>
+      <NavLink activeclassname="active" to="/about">About</NavLink>
+      <NavLink activeclassname="active" to="/vans">Vans</NavLink>
     </nav>    
   </header>
   );

@@ -16,7 +16,15 @@ export default function Vans(){
       .then(data => setVansData(data.vans))
   }, [])
   function handleFilter(key, value){
+      //clear all filtering
+    if(key === 'clear-all'){
+      setSearchParams(new URLSearchParams());
+    }
+
     setSearchParams(prevParams => {
+      // const filterParams = Array.from(prevParams.entries());
+      // const existingFilter = filterParams.find(([paramKey]) => paramKey === key);
+      //cear current filter
       if (value == null){
         prevParams.delete(key)
       } else {
@@ -36,7 +44,7 @@ export default function Vans(){
                                                   <div className="van-name">
                                                     {`${vanData.name}`}
                                                   </div>
-                                                  <button className={`van-type ${vanData.type} selected`}>{vanData.type}</button>
+                                                  <button className={`van-type ${vanData.type}`}>{vanData.type}</button>
                                                 </div>
                                               
                                                 <div className="right-detail">
@@ -67,7 +75,7 @@ export default function Vans(){
             <button onClick={() => handleFilter("type", "rugged")} className={`rugged-filter ${typeFilter === "rugged" ? "selected": ""}`}>Rugged</button>
           </div>
           { typeFilter ? (
-          <button onClick={() => setSearchParams({})} className="clear-filters"> Clear filters</button>    
+          <button onClick={() => handleFilter("type", null)} className="clear-filters"> Clear filters</button>    
           ) : null}
         </div>
       </div>

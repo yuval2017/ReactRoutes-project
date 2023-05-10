@@ -34,13 +34,13 @@
   padding: 7px 14px;
   
 }
-.van-type.simple.selected{
+.van-type.simple{
   background-color: #E17654;
 }
-.van-type.rugged.selected{
+.van-type.rugged{
   background-color: #115E59;
 }
-.van-type.luxury.selected{
+.van-type.luxury{
   background-color: #161616;
 }
 .left-detail > button [class*='van-type-']{

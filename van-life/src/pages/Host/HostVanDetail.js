@@ -16,11 +16,7 @@ export function HostVanDetail(){
     return <h1>Loading...</h1>
   }
 
-  const activeStyles = {
-    fontWeight: 'bold',
-    textDecoration: 'underline',
-    color: '#161616'
-  }
+
   return(
     <section className="host-van-section">
       <Link to=".." relative="path" className="back-to-all-vans-button">
@@ -43,9 +39,9 @@ export function HostVanDetail(){
           </div>
         </div>
         <nav className="host-nav-container">
-          <NavLink to="." end style={({isActive}) => isActive ? activeStyles: null}>Details</NavLink>
-          <NavLink style={({isActive}) => isActive ? activeStyles: null} to="pricing">Pricing</NavLink>
-          <NavLink to="photos">Photos</NavLink>
+          <NavLink to="." end activeclassname = "active" >Details</NavLink>
+          <NavLink activeclassname = "active" to="pricing">Pricing</NavLink>
+          <NavLink activeclassname = "active" to="photos">Photos</NavLink>
         </nav>
         <Outlet context={{currentVan}}/>
       </div>

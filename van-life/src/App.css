@@ -50,14 +50,20 @@
 }
 .nav-bar a:hover,
 .host-nav a:hover,
-.host-nav a.active {
+.host-nav-container a.active:hover,
+.host-nav a.active, 
+.nav-bar a.active,
+.host-nav-container a.active{
   text-decoration: underline;
   font-weight: bold;
 }
 .host-nav a.active, 
-.nav-bar a.active{
+.nav-bar a.active,
+.host-nav-container a.active{
   color: #161616;
+  pointer-events: none;
 }
+
 
 
 

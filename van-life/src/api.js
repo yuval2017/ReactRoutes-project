@@ -14,11 +14,10 @@ export async function getHostVan(id){
 async function fetchData(path, errorMessage){
   const res =  await fetch(path)
   if(!res.ok){
-    throw {
-      message: errorMessage,
-      statusText: res.statusText,
-      status: res.status
-    }
+    const error = new Error(errorMessage);
+    error.statusText = res.statusText;
+    error.status = res.status;
+    throw error;
   }
   const data = await res.json()
   return data.vans

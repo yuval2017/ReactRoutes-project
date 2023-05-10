@@ -17,8 +17,10 @@ import HostVanPhotos from './pages/Host/HostVanPhotos';
 import HostVanPricing from './pages/Host/HostVanPricing';
 import Error from './components/Error';
 import Login from './pages/Login';
+
+
+/* first render the outlet and the home, when clock on about dont render the home */
 function App() {
-            {/* first render the outlet and the home, when clock on about dont render the home */}
   const router = createBrowserRouter(createRoutesFromElements(
           <Route path='/' element={<Layout />}>
             <Route index element={<Home />}/>

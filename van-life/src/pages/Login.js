@@ -9,7 +9,7 @@ export default function Login(){
     const {name, value} = e.target
     console.log(value)
     setLoginFromData(prev => ({
-      ... prev,
+      ...prev,
       [name]: value
     }))
   }

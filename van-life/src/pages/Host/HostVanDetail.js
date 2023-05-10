@@ -1,5 +1,4 @@
-import {  useEffect ,useState } from "react";
-import { Link, NavLink, Outlet, useLoaderData, useParams } from "react-router-dom"
+import { Link, NavLink, Outlet, useLoaderData } from "react-router-dom"
 import './HostVanDetail.css'
 import { getHostVan } from "../../api";
 

@@ -17,7 +17,6 @@ export default function Login(){
   return (
     <div className='login-container'>
       <h1>Sing in to your account</h1>
-      <div className='login'>
         
         <form onSubmit={handleSubmit} className='login-form'>
         <div className='input-container'>
@@ -26,7 +25,6 @@ export default function Login(){
         </div>
         <button className='login-button'>Log in</button>
         </form>
-      </div>
     </div>
   );
 }

@@ -3,8 +3,7 @@ import {
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
-  Route,
-  redirect
+  Route
 } from "react-router-dom"
 import Home from './pages/Home'
 import About from './pages/About'

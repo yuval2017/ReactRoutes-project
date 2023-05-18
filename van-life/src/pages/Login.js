@@ -1,4 +1,4 @@
-import { Form, redirect, useActionData, useLoaderData, useNavigate, useNavigation } from 'react-router-dom'
+import { Form, redirect, useActionData, useLoaderData, useNavigation } from 'react-router-dom'
 
 import './Login.css'
 import { loginUser } from '../api'
@@ -9,7 +9,8 @@ export async function action( {request} ){
   const email = formData.get("email")
   const password = formData.get("password")
     try {
-        const data = await loginUser({ email, password })
+        //the data return tocken or something we can use after
+        await loginUser({ email, password })
         localStorage.setItem("loggedin", true)
         return redirect("/host")
     } catch(err) {

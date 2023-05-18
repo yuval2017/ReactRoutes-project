@@ -2,13 +2,16 @@ import React from "react";
 import './HostVans.css'
 import { Link, useLoaderData } from "react-router-dom";
 import { getHostVans } from "../../api";
-export function loader(){
+import { requireAuth } from "../../util";
+
+export async function loader() {
+  await requireAuth()
   return getHostVans()
 }
 export default function HostVans(){
   const vans = useLoaderData()
-
  
+  
   const vansData = vans.map(van =>
     <Link
       to={van.id}
@@ -55,7 +58,7 @@ export default function HostVans(){
           <div className="view-all-text">View all</div>
         </div>
         <div className="host-vans-container">
-          {vansData&&vansData}
+          {vansData && vansData}
         </div>
       </div>
       

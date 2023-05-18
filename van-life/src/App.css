@@ -20,7 +20,8 @@
   padding-left: 26.79px;
   padding-right: 15px;
   z-index: 1000;
-  
+  flex-wrap: wrap;
+  gap: 10px;
   background-color: rgba(255, 247, 237, 1);
 }
 .header a {
@@ -28,8 +29,9 @@
 }
 
 .left-section{
+  display: flex;
   flex: 1;
-  padding-left: 10px;
+  justify-content: center;
 }
 .site-logo{
   text-align: center;
@@ -41,14 +43,18 @@
 .nav-bar{
   flex: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding-right: 20px;
-  gap: 20px;
+  
 }
 .nav-bar a{
   color: rgba(77, 77, 77, 1);
   font-size: 16px;
+  margin-right: 10px;
+}
+.nav-bar > *:last-child {
+  margin-right: 0;
 }
 .nav-bar a:hover,
 .host-nav a:hover,
@@ -72,7 +78,7 @@
 
 }
 .login-icon{
-  width: 70%;
+  width: 20px;
 }
 
 

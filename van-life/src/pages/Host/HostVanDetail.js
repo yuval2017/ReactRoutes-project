@@ -1,15 +1,20 @@
 import { Link, NavLink, Outlet, useLoaderData } from "react-router-dom"
 import './HostVanDetail.css'
-import { getHostVan } from "../../api";
 
-export async function loader(id){
-  const data = getHostVan(id);
-  return data;
+import { requireAuth } from "../../util";
+import { getHostVans } from "../../api";
+
+export async function loader({ params }) {
+  await requireAuth()
+  return getHostVans(params.id)
 }
 
 export function HostVanDetail(){
   
   const currentVan = useLoaderData()
+  if (currentVan === null){
+    return (<div>not good</div>);
+  }
   return(
     <section className="host-van-section">
       <Link to=".." relative="path" className="back-to-all-vans-button">
@@ -33,9 +38,10 @@ export function HostVanDetail(){
         </div>
         <nav className="host-nav-container">
           <NavLink to="." end activeclassname = "active" >Details</NavLink>
-          <NavLink activeclassname = "active" to="pricing">Pricing</NavLink>
-          <NavLink activeclassname = "active" to="photos">Photos</NavLink>
+          <NavLink to="pricing" activeclassname = "active" >Pricing</NavLink>
+          <NavLink to="photos" activeclassname = "active" >Photos</NavLink>
         </nav>
+        {/* sent context  */}
         <Outlet context={{currentVan}}/>
       </div>
     </section>

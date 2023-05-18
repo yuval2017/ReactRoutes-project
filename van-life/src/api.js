@@ -1,24 +1,44 @@
-
-export async function getVans(){
-  const data = await fetchData("/api/vans", "Failed to fetch vans")
- return data
-}
-export async function getHostVans(){
-  const data = await fetchData("/api/host/vans", "Failed to fetch host vans")
-  return data
-}
-export async function getHostVan(id){
-  const data = await fetchData(`/api/host/vans/${id}`, `Load van ${id} failed`)
-  return data
-}
-async function fetchData(path, errorMessage){
-  const res =  await fetch(path)
-  if(!res.ok){
-    const error = new Error(errorMessage);
-    error.statusText = res.statusText;
-    error.status = res.status;
-    throw error;
+export async function getVans(id) {
+  const url = id ? `/api/vans/${id}` : "/api/vans"
+  const res = await fetch(url)
+  if (!res.ok) {
+      throw {
+          message: "Failed to fetch vans",
+          statusText: res.statusText,
+          status: res.status
+      }
   }
   const data = await res.json()
   return data.vans
+}
+
+export async function getHostVans(id) {
+  const url = id ? `/api/host/vans/${id}` : "/api/host/vans"
+  const res = await fetch(url)
+  if (!res.ok) {
+      throw {
+          message: "Failed to fetch vans",
+          statusText: res.statusText,
+          status: res.status
+      }
+  }
+  const data = await res.json()
+  return data.vans
+}
+
+export async function loginUser(creds) {
+  const res = await fetch("/api/login",
+      { method: "post", body: JSON.stringify(creds) }
+  )
+  const data = await res.json()
+
+  if (!res.ok) {
+      throw {
+          message: data.message,
+          statusText: res.statusText,
+          status: res.status
+      }
+  }
+
+  return data
 }

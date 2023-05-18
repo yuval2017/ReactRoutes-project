@@ -3,7 +3,7 @@
   grid-template-columns: 1fr;
   justify-content: center;
   width: 50%;
-  min-width: 200vh;
+
   /* put items in center */
   margin: 0 auto;
   box-sizing: border-box;

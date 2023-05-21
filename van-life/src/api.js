@@ -34,7 +34,7 @@ export async function loginUser(creds) {
   const data = await res.json()
 
   if (!res.ok) {
-    const error = new Error("error when loading loggin");
+    const error = new Error(data.message);
     error.statusText = res.statusText;
     error.status = res.status;
     throw error

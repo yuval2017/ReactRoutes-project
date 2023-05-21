@@ -7,7 +7,13 @@ Link > *{
   font-family: 'Inter', sans-serif;
   word-wrap: break-word;
   padding: 54.23px 28.9px 83.23px 26.91px;
-  gap: 55.69px;
+  gap: 30.69px;
+}
+.vans-page-content{
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+  
 }
 .vans-container a{
   color: black;

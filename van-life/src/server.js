@@ -1,5 +1,6 @@
 import { createServer, Model, Response } from "miragejs"
 
+
 createServer({
     models: {
         vans: Model,
@@ -14,43 +15,35 @@ createServer({
         server.create("van", { id: "5", name: "The Cruiser", price: 120, description: "The Cruiser is a van for those who love to travel in comfort and luxury. With its many windows, spacious interior and ample storage space, the Cruiser offers a beautiful view wherever you go.", imageUrl: "https://assets.scrimba.com/advanced-react/react-router/the-cruiser.png", type: "luxury", hostId: "789" })
         server.create("van", { id: "6", name: "Green Wonder", price: 70, description: "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.", imageUrl: "https://assets.scrimba.com/advanced-react/react-router/green-wonder.png", type: "rugged", hostId: "123" })
         server.create("user", { id: "123", email: "b@b.com", password: "p123", name: "Bob" })
-        console.log("in server")
-
     },
 
     routes() {
         this.namespace = "api"
         this.logging = false
-        // this.timing = 2000
+        this.timing = 1000
 
         this.get("/vans", (schema, request) => {
             // return new Response(400, {}, {error: "Error fetching data"})
-            console.log("vans")
             return schema.vans.all()
         })
 
         this.get("/vans/:id", (schema, request) => {
-            console.log("vans.id")
-
             const id = request.params.id
             return schema.vans.find(id)
         })
 
         this.get("/host/vans", (schema, request) => {
             // Hard-code the hostId for now
-            console.log("host vans")
             return schema.vans.where({ hostId: "123" })
         })
 
         this.get("/host/vans/:id", (schema, request) => {
             // Hard-code the hostId for now
-            console.log("host vans.id")
             const id = request.params.id
             return schema.vans.findBy({ id, hostId: "123" })
         })
 
         this.post("/login", (schema, request) => {
-            console.log("login")
             const { email, password } = JSON.parse(request.requestBody)
             // This is an extremely naive version of authentication. Please don't
             // do this in the real world, and never save raw text passwords
